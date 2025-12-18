@@ -2,7 +2,11 @@
 import React from 'react';
 import { ShoppingBag, Plus, Heart } from 'lucide-react';
 import { BoneIcon } from './Icons';
-
+import p1 from "@/assets/p1.png";
+import p2 from "@/assets/p2.png";
+import p3 from "@/assets/p3.png";
+import p4 from "@/assets/p4.png";
+import p5 from "@/assets/p5.png";
 interface Product {
   id: number;
   name: string;
@@ -21,7 +25,7 @@ const PRODUCTS: Product[] = [
     category: 'Personalized',
     price: '₹899',
     rating: 5,
-    image: '/assets/p1.png',
+    image: p1,
     theme: 'magenta',
     rotate: '-rotate-1',
   },
@@ -31,7 +35,7 @@ const PRODUCTS: Product[] = [
     category: 'Healthy treats',
     price: '₹299',
     rating: 4,
-    image: '/assets/p2.png',
+    image: p2,
     theme: 'gold',
     rotate: 'rotate-1',
   },
@@ -41,7 +45,7 @@ const PRODUCTS: Product[] = [
     category: 'Gift sets',
     price: '₹1499',
     rating: 5,
-    image: '/assets/p4.png',
+    image: p4,
     theme: 'teal',
     rotate: '-rotate-2',
   },
@@ -51,7 +55,7 @@ const PRODUCTS: Product[] = [
     category: 'Subscription',
     price: '₹599',
     rating: 5,
-    image: '/assets/p5.png',
+    image: p5,
     theme: 'lavender',
     rotate: 'rotate-2',
   },
@@ -83,11 +87,11 @@ const THEME_STYLES = {
     sticker: 'bg-[#ffd9d9] text-[#eb2f5f]',
   },
   lavender: {
-    bg: 'bg-[#e2deff]',
-    shadow: 'bg-[#0d5f73]',
-    button: 'bg-[#0d5f73] hover:brightness-90 shadow-[#e2deff]',
-    text: 'text-[#0d5f73]',
-    border: 'border-[#e2deff]',
+    bg: 'bg-[#f762b3]',
+    shadow: 'bg-[#f762b3]',
+    button: 'bg-[#f762b3] hover:brightness-90 shadow-[#f762b3]',
+    text: 'text-[#f762b3]',
+    border: 'border-[#f762b3]',
     sticker: 'bg-[#eb2f5f] text-white',
   },
 };

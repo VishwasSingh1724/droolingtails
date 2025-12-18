@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { BoneIcon, PawIcon } from './Icons';
+import nemo from '@/assets/nemo.png';
+import Saurabhi from '@/assets/saurabhi.png';
 
 const AboutUs: React.FC = () => {
   return (
@@ -54,7 +56,7 @@ const AboutUs: React.FC = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80 transition-transform duration-700 hover:scale-105 hover:rotate-2">
                <div className="absolute inset-0 bg-[#ffe7a6] rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] rotate-6 opacity-60 group-hover:rotate-12 transition-all duration-500"></div>
                <img 
-                 src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?q=80&w=1362&auto=format&fit=crop" 
+                 src={nemo}
                  alt="Chef Nemo" 
                  className="relative w-full h-full object-cover rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] shadow-2xl border-4 border-white"
                />
@@ -88,7 +90,7 @@ const AboutUs: React.FC = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80 order-1 md:order-2 transition-transform duration-700 hover:scale-105 hover:-rotate-2">
                <div className="absolute inset-0 bg-[#ffd9d9] rounded-[66%_34%_35%_65%_/_58%_34%_66%_42%] -rotate-6 opacity-60 group-hover:-rotate-12 transition-all duration-500"></div>
                <img 
-                 src="https://images.unsplash.com/photo-1588514494194-43cb5f47d33d?q=80&w=1936&auto=format&fit=crop" 
+                 src={Saurabhi}
                  alt="Saurabhi" 
                  className="relative w-full h-full object-cover rounded-[56%_44%_35%_65%_/_58%_54%_46%_42%] shadow-2xl border-4 border-white"
                />

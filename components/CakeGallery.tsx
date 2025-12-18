@@ -1,7 +1,14 @@
 
+
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import { BoneIcon, PawIcon } from "./Icons";
 import { Star, Heart, Gift, Cloud } from "lucide-react";
+import c1 from "@/assets/c1.jpeg";
+import c2 from "@/assets/c2.jpeg";
+import c3 from "@/assets/c3.jpeg";
+import c4 from "@/assets/c4.jpeg";
+import c5 from "@/assets/c5.jpeg";
+import c6 from "@/assets/c6.jpeg";
 
 type GalleryItemType = 'photo' | 'decoration';
 
@@ -18,7 +25,7 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   { 
     type: 'photo', 
-    imageUrl: "/assets/c1.jpeg", 
+    imageUrl: c1, 
     title: "Jojo", 
     date: "Sep 12", 
     rotation: "rotate-2", 
@@ -31,7 +38,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "/assets/c2.jpeg", 
+    imageUrl: c2, 
     title: "Cutie", 
     date: "Oct 04", 
     rotation: "-rotate-3", 
@@ -39,7 +46,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "/assets/c3.jpeg", 
+    imageUrl: c3, 
     title: "Sweetie", 
     date: "Aug 22", 
     rotation: "rotate-1", 
@@ -52,7 +59,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "/assets/c4.jpeg", 
+    imageUrl: c4, 
     title: "Jerry", 
     date: "Nov 15", 
     rotation: "-rotate-2", 
@@ -60,7 +67,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "/assets/c5.jpeg", 
+    imageUrl: c5, 
     title: "Simba", 
     date: "Dec 01", 
     rotation: "rotate-3", 
@@ -73,7 +80,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "/assets/c6.jpeg", 
+    imageUrl: c6, 
     title: "Yoshi", 
     date: "Jan 10", 
     rotation: "-rotate-1", 

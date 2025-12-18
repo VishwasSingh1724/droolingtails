@@ -2,6 +2,7 @@
 import React from 'react';
 import { Play, Star, Sparkles, ArrowRight } from 'lucide-react';
 import { BoneIcon, PawIcon } from './Icons';
+import hero from '@/assets/hero-2.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const Hero: React.FC = () => {
         {/* Image section first on mobile, second on desktop */}
         <div className="order-1 lg:order-2 lg:col-span-4 relative h-[500px] lg:h-[700px] flex items-center justify-center z-10">
             <img 
-               src="/assets/hero-2.jpg" 
+               src={hero} 
                alt="Happy Dog" 
                className="w-full h-full object-contain scale-[2] origin-center -translate-x-[17%] sm:translate-x-0 transition-transform"
             />
