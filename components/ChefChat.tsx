@@ -9,7 +9,7 @@ const ChefChat: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'model',
-      text: "Woof! I'm Chef Barney. Looking for a yummy treat recipe or pet care tip?",
+      text: "Woof! I'm Chef Nemo. Looking for a yummy treat recipe or pet care tip?",
       timestamp: new Date(),
     },
   ]);
@@ -63,7 +63,7 @@ const ChefChat: React.FC = () => {
                 <ChefHat size={20} />
               </div>
               <div>
-                <h4 className="font-bold brand-font">Chef Barney</h4>
+                <h4 className="font-bold brand-font">Chef Nemo</h4>
                 <p className="text-xs text-white/80">AI Kitchen Assistant</p>
               </div>
             </div>
@@ -130,7 +130,7 @@ const ChefChat: React.FC = () => {
         } text-white p-4 rounded-full shadow-lg shadow-[#dba135]/30 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 font-bold`}
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
-        {!isOpen && <span className="hidden md:inline">Ask Chef Barney</span>}
+        {!isOpen && <span className="hidden md:inline">Ask Chef Nemo</span>}
       </button>
     </div>
   );

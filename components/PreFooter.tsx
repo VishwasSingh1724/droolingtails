@@ -21,7 +21,7 @@ const PreFooter: React.FC = () => {
         </div>
 
         <div className="relative z-20 text-left px-6 md:px-12 w-full pb-0 md:pb-2">
-             <h2 className="text-[14vw] md:text-[13vw] font-black brand-font text-[#0d5f73] leading-[0.8] tracking-tighter opacity-100 transform hover:scale-[1.01] transition-transform duration-700 cursor-default select-none">
+             <h2 className="text-[14vw] md:text-[13vw] font-black brand-font text-[#0d5f73] leading-[0.8] tracking-tighter opacity-100 transform hover:scale-[1.01] transition-transform duration-700 select-none">
                 DROOLING <br className="lg:hidden" />
                 <span className="text-[#ff5454]">TAILS</span>
              </h2>

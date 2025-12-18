@@ -83,7 +83,7 @@ const CustomCakeSection: React.FC = () => {
         <div className="text-center mb-16">
              <div className="inline-block relative">
                  <h2 className="text-3xl md:text-5xl font-black text-[#333] brand-font relative z-10 transform -rotate-1">
-                    Chef Barney's <br className="md:hidden"/>
+                    Chef Nemo's <br className="md:hidden"/>
                     <span className="text-orange-500 underline decoration-wavy decoration-teal-300 decoration-4 underline-offset-4">Design Station</span>
                  </h2>
              </div>

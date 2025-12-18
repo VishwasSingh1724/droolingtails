@@ -12,6 +12,11 @@
       body {
         font-family: 'Nunito', sans-serif;
         background-color: #fffcf0;
+        cursor: url('assets/cursor.png'), auto;
+          /* Custom pointer cursor for pointer areas only */
+          .custom-cursor-pointer, button, a, [role="button"] {
+              cursor: url('assets/cursor-pointer.png'), pointer;
+          }
       }
       h1, h2, h3, h4, h5, h6, .brand-font {
         font-family: 'Fredoka', sans-serif;

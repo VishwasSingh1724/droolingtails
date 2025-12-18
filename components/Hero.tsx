@@ -6,7 +6,6 @@ import { BoneIcon, PawIcon } from './Icons';
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-[95vh] flex items-center bg-[#fffcf0] overflow-hidden pt-20 pb-12 lg:py-0 selection:bg-[#e2deff] selection:text-[#0d5f73]">
-      
       {/* === BACKGROUND TEXTURE (Subtle Grid) === */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
            style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
@@ -21,9 +20,16 @@ const Hero: React.FC = () => {
       </svg>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center h-full">
-        
-        <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20">
-           
+        {/* Image section first on mobile, second on desktop */}
+        <div className="order-1 lg:order-2 lg:col-span-4 relative h-[500px] lg:h-[700px] flex items-center justify-center z-10">
+            <img 
+               src="/assets/hero-2.jpg" 
+               alt="Happy Dog" 
+               className="w-full h-full object-contain scale-[2] origin-center -translate-x-[17%] sm:translate-x-0 transition-transform"
+            />
+        </div>
+        {/* Text section second on mobile, first on desktop */}
+        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20">
            <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform cursor-pointer">
               <span className="inline-block bg-[#0d5f73] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest shadow-[4px_4px_0px_0px_rgba(219,161,53,1)] border-2 border-transparent hover:border-[#dba135] transition-all uppercase">
                 Warning: Causes Zoomies 🚀
@@ -84,14 +90,6 @@ const Hero: React.FC = () => {
                  <p className="text-xs font-bold text-gray-500"><span className="text-[#0d5f73] font-black">2,500+</span> Tails Wagging</p>
               </div>
            </div>
-        </div>
-
-        <div className="lg:col-span-4 relative h-[500px] lg:h-[700px] flex items-center justify-center z-10">
-            <img 
-               src="https://res.cloudinary.com/dkxsm6wqf/image/upload/v1765484637/image-removebg-preview_jwaibb.png" 
-               alt="Happy Dog" 
-               className="w-full h-full object-contain scale-[2] origin-center"
-            />
         </div>
       </div>
 

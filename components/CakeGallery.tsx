@@ -18,7 +18,7 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1625596704787-82d2c67425e4?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c1.jpeg", 
     title: "Jojo", 
     date: "Sep 12", 
     rotation: "rotate-2", 
@@ -31,7 +31,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1562916881-19d690a2976b?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c2.jpeg", 
     title: "Cutie", 
     date: "Oct 04", 
     rotation: "-rotate-3", 
@@ -39,7 +39,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c3.jpeg", 
     title: "Sweetie", 
     date: "Aug 22", 
     rotation: "rotate-1", 
@@ -52,7 +52,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c4.jpeg", 
     title: "Jerry", 
     date: "Nov 15", 
     rotation: "-rotate-2", 
@@ -60,7 +60,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1605651528659-269c84976729?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c5.jpeg", 
     title: "Simba", 
     date: "Dec 01", 
     rotation: "rotate-3", 
@@ -73,33 +73,12 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   { 
     type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1549488497-6571597843d1?q=80&w=1000&auto=format&fit=crop", 
+    imageUrl: "/assets/c6.jpeg", 
     title: "Yoshi", 
     date: "Jan 10", 
     rotation: "-rotate-1", 
     sticker: "🐾" 
   },
-  { 
-    type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1608611139634-92736195821c?q=80&w=1000&auto=format&fit=crop", 
-    title: "Milo", 
-    date: "Feb 14", 
-    rotation: "rotate-2", 
-    sticker: "😍" 
-  },
-  { 
-    type: 'decoration', 
-    icon: <Gift className="w-14 h-14 text-[#eb2f5f] fill-[#ffd9d9]" />, 
-    rotation: "rotate-12" 
-  },
-  { 
-    type: 'photo', 
-    imageUrl: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?q=80&w=1000&auto=format&fit=crop", 
-    title: "Rocky", 
-    date: "Mar 03", 
-    rotation: "-rotate-2", 
-    sticker: "🐶" 
-  }
 ];
 
 const CakeGallery: React.FC = () => {
@@ -191,7 +170,7 @@ const CakeGallery: React.FC = () => {
            </h2>
         </div>
 
-        <div ref={scrollRef} className="flex items-start pl-[10vw] pt-[32vh] h-full gap-8 md:gap-12 relative">
+        <div ref={scrollRef} className="flex items-start pl-[10vw] pt-[32vh] h-full gap-16 md:gap-28 relative">
           <div className="absolute top-[17vh] left-0 h-4 z-0 origin-left" style={{ width: '100%' }}>
              <svg className="w-full h-full overflow-visible" preserveAspectRatio="none">
                 <path d={ropePath} fill="none" stroke="#dba135" strokeWidth="3" strokeLinecap="round" />
@@ -202,8 +181,10 @@ const CakeGallery: React.FC = () => {
             const stagger = index % 2 === 0 ? 0 : 50;
             const baseStringHeightVh = 15;
             const transformOriginY = `calc(-${baseStringHeightVh}vh - ${stagger}px)`;
+            // Add extra right margin to the last card for better spacing
+            const isLast = index === GALLERY_ITEMS.length - 1;
             return (
-                <div key={index} className={`relative flex-none ${item.type === 'photo' ? 'w-64 md:w-72' : 'w-24 md:w-32'} group perspective-1000`} style={{ transformOrigin: `50% ${transformOriginY}`, animation: `sway ${4 + index * 0.7}s ease-in-out infinite alternate`, marginTop: `${stagger}px` }}>
+                <div key={index} className={`relative flex-none ${item.type === 'photo' ? 'w-64 md:w-72' : 'w-24 md:w-32'} group perspective-1000${isLast ? ' mr-32 md:mr-52' : ''}`} style={{ transformOrigin: `50% ${transformOriginY}`, animation: `sway ${4 + index * 0.7}s ease-in-out infinite alternate`, marginTop: `${stagger}px` }}>
                     <div className="absolute left-1/2 -translate-x-1/2 w-[2px] bg-[#dba135]/30 z-0 origin-bottom" style={{ height: `calc(${baseStringHeightVh}vh + ${stagger}px)`, top: `calc(-${baseStringHeightVh}vh - ${stagger}px)` }}></div>
                     <div className="absolute left-1/2 -translate-x-1/2 w-4 h-10 z-20 flex flex-col items-center" style={{ top: `calc(-${baseStringHeightVh}vh - ${stagger}px - 12px)` }}>
                         <div className="w-full h-full bg-[#dba135] rounded-sm shadow-md border border-[#0d5f73]/20"></div>
@@ -222,7 +203,7 @@ const CakeGallery: React.FC = () => {
                             <div className="absolute -top-3 -right-3 w-10 h-10 bg-[#ffe7a6] rounded-full flex items-center justify-center text-xl shadow-md border-2 border-white transform rotate-12 group-hover:scale-125 transition-transform">{item.sticker}</div>
                         </div>
                     ) : (
-                        <div className={`flex flex-col items-center transform ${item.rotation} transition-transform hover:scale-110 hover:rotate-12 cursor-grab active:cursor-grabbing`}>
+                        <div className={`flex flex-col items-center transform ${item.rotation} transition-transform hover:scale-110 hover:rotate-12`}>
                             <div className="drop-shadow-lg filter transform hover:scale-110 transition-transform">{item.icon}</div>
                         </div>
                     )}
