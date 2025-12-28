@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
          <path fill="currentColor" d="M38.9,-64.6C51.9,-59.9,64.9,-53.4,73.4,-43.6C82.7,-33.8,87.5,-20.7,85.2,-8.5C82.9,3.7,73.5,15,64.4,25.3C55.3,35.6,46.5,44.9,36.4,52.2C26.3,59.5,14.9,64.8,2.7,60.2C-9.5,55.5,-22.5,41,-33.8,30C-45.1,19,-54.7,11.5,-60.8,-0.1C-66.9,-11.7,-69.5,-27.4,-62.4,-39.8C-55.3,-52.2,-38.5,-61.3,-23.4,-64.5C-8.3,-67.7,25.9,-69.3,38.9,-64.6Z" transform="translate(100 100)" />
       </svg>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center h-full">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center h-full">
         {/* Image section first on mobile, second on desktop */}
         <div className="order-1 lg:order-2 lg:col-span-4 relative h-[500px] lg:h-[700px] flex items-center justify-center z-10">
             <img 
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             />
         </div>
         {/* Text section second on mobile, first on desktop */}
-        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 mb-8">
+        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 mb-28">
            <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform custom-cursor-pointer">
               <span className="inline-block bg-[#0d5f73] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest shadow-[4px_4px_0px_0px_rgba(219,161,53,1)] border-2 border-transparent hover:border-[#dba135] transition-all uppercase">
                 Warning: Causes Zoomies 🚀
