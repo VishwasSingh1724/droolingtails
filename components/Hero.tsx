@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Play, Star, Sparkles, ArrowRight } from 'lucide-react';
+import { Play, Star, Sparkles, ArrowRight, Cake, Gift } from 'lucide-react';
 import { BoneIcon, PawIcon } from './Icons';
-import hero from '@/assets/hero-2.jpg';
+import hero from '@/assets/Hero.png';
 
 const Hero: React.FC = () => {
   return (
@@ -26,34 +26,34 @@ const Hero: React.FC = () => {
             <img 
                src={hero} 
                alt="Happy Dog" 
-               className="w-full h-full object-contain scale-[2] origin-center -translate-x-[17%] sm:translate-x-0 transition-transform"
+               className="w-full h-full object-fill scale-x-[1.6] scale-y-[1.7] mt-48 md:mt-0  md:scale-x-[2] md:scale-y-[1.3]  origin-center  sm:translate-x-0 transition-transform"
             />
         </div>
         {/* Text section second on mobile, first on desktop */}
-        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20">
-           <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform cursor-pointer">
+        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 mb-8">
+           <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform custom-cursor-pointer">
               <span className="inline-block bg-[#0d5f73] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest shadow-[4px_4px_0px_0px_rgba(219,161,53,1)] border-2 border-transparent hover:border-[#dba135] transition-all uppercase">
                 Warning: Causes Zoomies 🚀
               </span>
            </div>
 
            <h1 className="relative font-black brand-font text-[#0d5f73] tracking-tight z-20 text-left flex flex-col items-start leading-[0.85]">
-              <span className="block text-[14vw] lg:text-[8rem] xl:text-[9.5rem] relative z-10 text-[#0d5f73]">
-                BEST PART IS
+              <span className="block text-[14vw] lg:text-[8rem] xl:text-[8rem] relative z-10 text-[#0d5f73]">
+                THE BEST PART? 
               </span>
               <span className="block text-[9vw] lg:text-[5.5rem] xl:text-[6.5rem] mt-2 lg:mt-4 text-[#dba135] drop-shadow-sm">
-                  IT'S POOCH APPROVED
+                  IT'S POOCH APPROVED!!
               </span>
               <svg className="absolute top-[48%] left-0 w-[60%] h-8 text-[#ffe7a6] -z-10 mix-blend-multiply opacity-80" viewBox="0 0 300 20" preserveAspectRatio="none">
                  <path d="M0 10 Q 150 20 300 10" stroke="currentColor" strokeWidth="15" fill="none" />
               </svg>
            </h1>
 
-           <p className="mt-8 text-xl text-gray-600 font-medium max-w-2xl leading-relaxed">
-              Gourmet treats baked with <span className="font-bold text-[#eb2f5f]">love</span>, science, and a little bit of magic. Your best friend deserves a seat at the table.
+           <p className="mt-12 text-xl text-gray-600 font-medium max-w-2xl leading-relaxed">
+              From birthday barks to lazy-day tail wags, our treats make your pup drool, steal heart and disappear fast.
            </p>
 
-           <div className="mt-10 flex flex-col sm:flex-row gap-5 items-center w-full sm:w-auto">
+           <div className="mt-10 flex flex-col sm:flex-row gap-8 items-center w-full sm:w-auto">
               <button className="relative group">
                  <div className="absolute inset-0 bg-[#0d5f73] rounded-2xl transform translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                  <div className="relative bg-[#eb2f5f] text-white px-8 py-4 rounded-2xl font-black text-lg border-2 border-[#0d5f73] flex items-center gap-3 transform group-hover:-translate-y-1 transition-transform">
@@ -61,34 +61,33 @@ const Hero: React.FC = () => {
                  </div>
               </button>
 
-              <button className="group flex items-center gap-3 px-6 py-3 rounded-full hover:bg-white hover:shadow-lg transition-all border-2 border-transparent hover:border-[#ffe7a6]">
-                 <div className="w-12 h-12 bg-[#c7f5ff] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play fill="#0d5f73" className="text-[#0d5f73] ml-1 w-5 h-5" />
+              <div className="flex items-center gap-4">
+                 {/* Pastry Shortcut */}
+                 <div className="group relative">
+                    <div className="absolute -inset-1 bg-[#c7f5ff] rounded-full blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative w-14 h-14 bg-[#c7f5ff] rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition-transform custom-cursor-pointer border-2 border-white">
+                        <Cake size={24} className="text-[#0d5f73]" />
+                    </div>
+                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0d5f73] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-tighter">Pastry</span>
                  </div>
-                 <div className="text-left">
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Watch Video</p>
-                    <p className="font-bold text-[#0d5f73]">See How It's Made</p>
+
+                 {/* Munchies Shortcut */}
+                 <div className="group relative">
+                    <div className="absolute -inset-1 bg-[#ffe7a6] rounded-full blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative w-14 h-14 bg-[#ffe7a6] rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition-transform custom-cursor-pointer border-2 border-white">
+                        <BoneIcon width={24} height={24} className="text-[#0d5f73]" />
+                    </div>
+                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0d5f73] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-tighter">Munchies</span>
                  </div>
-              </button>
-           </div>
-           
-           <div className="mt-12 flex items-center gap-4 p-3 bg-white/60 backdrop-blur-sm rounded-2xl border border-white shadow-sm transform rotate-1 hover:rotate-0 transition-transform w-fit">
-              <div className="flex -space-x-3">
-                  {[1,2,3,4].map(i => (
-                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden shadow-sm">
-                        <img src={`https://i.pravatar.cc/100?img=${i + 30}`} alt="user" />
-                     </div>
-                  ))}
-              </div>
-              <div className="pr-4">
-                 <div className="flex items-center gap-1">
-                    <Star size={14} className="fill-[#dba135] text-[#dba135]" />
-                    <Star size={14} className="fill-[#dba135] text-[#dba135]" />
-                    <Star size={14} className="fill-[#dba135] text-[#dba135]" />
-                    <Star size={14} className="fill-[#dba135] text-[#dba135]" />
-                    <Star size={14} className="fill-[#dba135] text-[#dba135]" />
+
+                 {/* Hampers Shortcut */}
+                 <div className="group relative">
+                    <div className="absolute -inset-1 bg-[#ffd9d9] rounded-full blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="relative w-14 h-14 bg-[#ffd9d9] rounded-full flex items-center justify-center shadow-sm hover:scale-110 transition-transform custom-cursor-pointer border-2 border-white">
+                        <Gift size={24} className="text-[#0d5f73]" />
+                    </div>
+                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0d5f73] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-tighter">Hampers</span>
                  </div>
-                 <p className="text-xs font-bold text-gray-500"><span className="text-[#0d5f73] font-black">2,500+</span> Tails Wagging</p>
               </div>
            </div>
         </div>

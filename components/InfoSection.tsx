@@ -88,9 +88,9 @@ const InfoSection: React.FC = () => {
                 </p>
                 
                 <div className="flex justify-center gap-4 mt-4 text-2xl">
-                    <span className="hover:-translate-y-2 transition-transform cursor-pointer" title="Lavender Treat">🟣</span>
-                    <span className="hover:-translate-y-2 transition-transform cursor-pointer delay-75" title="Cupcake">🧁</span>
-                    <span className="hover:-translate-y-2 transition-transform cursor-pointer delay-150" title="Cake">🎂</span>
+                    <span className="hover:-translate-y-2 transition-transform custom-cursor-pointer" title="Lavender Treat">🟣</span>
+                    <span className="hover:-translate-y-2 transition-transform custom-cursor-pointer delay-75" title="Cupcake">🧁</span>
+                    <span className="hover:-translate-y-2 transition-transform custom-cursor-pointer delay-150" title="Cake">🎂</span>
                 </div>
              </div>
           </div>

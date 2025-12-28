@@ -76,7 +76,7 @@ const AboutUs: React.FC = () => {
 
           <div className="relative md:absolute md:top-40 md:right-10 lg:right-20 flex flex-col items-center md:items-end group">
              <div className="relative mb-4 md:-mr-8 z-20 text-center md:text-right order-2 md:order-1">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#0d5f73] brand-font transform rotate-2 bg-white px-6 py-2 shadow-lg inline-block border-2 border-[#ffd9d9] rounded-lg">
+              <h3 className="text-4xl md:text-5xl font-extrabold text-[#0d5f73] brand-font transform rotate-2 bg-white px-6 py-2  inline-block border-2 border-[#ffd9d9] rounded-lg">
                 Clumsy Hooman
               </h3>
               <p className="font-bold text-gray-400 text-sm mt-1 mr-2 transform rotate-2">(Saurabhi Deokar)</p>
@@ -92,7 +92,7 @@ const AboutUs: React.FC = () => {
                <img 
                  src={Saurabhi}
                  alt="Saurabhi" 
-                 className="relative w-full h-full object-cover rounded-[56%_44%_35%_65%_/_58%_54%_46%_42%] shadow-2xl border-4 border-white"
+                 className="relative w-full h-full object-cover rounded-[56%_44%_35%_65%_/_58%_54%_46%_42%] border-4 border-white"
                />
             </div>
           </div>

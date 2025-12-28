@@ -213,7 +213,7 @@ const CustomCakeSection: React.FC = () => {
 
                          {/* === TOPPERS (On Top Tier) === */}
                          {bakedTopper !== 'none' && (
-                             <div className="absolute top-[35%] z-40 transform -translate-y-full">
+                             <div className="absolute top-[40%] z-40 transform -translate-y-full">
                                  {bakedTopper === 'candle' && (
                                      <div className="flex gap-2">
                                          {[...Array(3)].map((_, i) => (
