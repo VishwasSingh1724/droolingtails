@@ -16,27 +16,26 @@ const Hero: React.FC = () => {
       <svg className="absolute top-20 left-0 w-64 h-64 text-[#ffe7a6] opacity-60 -z-10 animate-pulse" viewBox="0 0 200 200">
          <path fill="currentColor" d="M45.7,-76.3C58.9,-69.3,69.1,-55.5,76.9,-41.2C84.7,-26.9,90.1,-12.2,88.2,1.8C86.3,15.8,77.1,29.1,66.8,40.6C56.5,52.1,45.1,61.8,32.4,69.1C19.7,76.4,5.7,81.4,-7.8,80.3C-21.3,79.2,-34.3,72,-45.6,63.2C-56.9,54.4,-66.5,44,-73.4,31.9C-80.3,19.8,-84.5,6,-82.9,-7.1C-81.3,-20.2,-73.9,-32.6,-64.1,-43.3C-54.3,-54,-42.1,-63,-29.3,-70.2C-16.5,-77.4,-3.1,-82.8,10.1,-81.4C23.3,-80,45.7,-76.3,45.7,-76.3Z" transform="translate(100 100)" />
       </svg>
-      <svg className="absolute bottom-0 right-0 w-96 h-96 text-[#c7f5ff] opacity-60 -z-10" viewBox="0 0 200 200">
+      <svg className="absolute bottom-0 right-0 w-96 h-96 text-[#c7f5ff] opacity-60 -z-10" viewBox="0 0 200 200"> 
          <path fill="currentColor" d="M38.9,-64.6C51.9,-59.9,64.9,-53.4,73.4,-43.6C82.7,-33.8,87.5,-20.7,85.2,-8.5C82.9,3.7,73.5,15,64.4,25.3C55.3,35.6,46.5,44.9,36.4,52.2C26.3,59.5,14.9,64.8,2.7,60.2C-9.5,55.5,-22.5,41,-33.8,30C-45.1,19,-54.7,11.5,-60.8,-0.1C-66.9,-11.7,-69.5,-27.4,-62.4,-39.8C-55.3,-52.2,-38.5,-61.3,-23.4,-64.5C-8.3,-67.7,25.9,-69.3,38.9,-64.6Z" transform="translate(100 100)" />
       </svg>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center h-full">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center h-full ">
         {/* Image section first on mobile, second on desktop */}
         <div className="order-1 lg:order-2 lg:col-span-4 relative h-[500px] lg:h-[700px] flex items-center justify-center z-10">
             <img 
                src={hero} 
                alt="Happy Dog" 
-               className="w-full h-full object-fill scale-x-[1.6] scale-y-[1.7] mt-48 md:mt-0  md:scale-x-[2] md:scale-y-[1.3]  origin-center  sm:translate-x-0 transition-transform"
+               className=" w-[160%] scale-y-[1.1] md:mt-0 mt-28 md:scale-y-[0.97] md:scale-x-[1.1]  md:mr-28 h-[160%] max-w-[160%] lg:max-w-[160%] object-fill drop-shadow-2xl select-none pointer-events-none transform lg:translate-x-20 translate-y-12 lg:translate-y-20 z-10"
             />
         </div>
         {/* Text section second on mobile, first on desktop */}
-        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left relative z-20 mb-28">
-           <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform custom-cursor-pointer">
-              <span className="inline-block bg-[#0d5f73] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest shadow-[4px_4px_0px_0px_rgba(219,161,53,1)] border-2 border-transparent hover:border-[#dba135] transition-all uppercase">
-                Warning: Causes Zoomies 🚀
-              </span>
-           </div>
-
+        <div className="order-2 lg:order-1 lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left mt-20 md:mt-0 relative z-20">
+         <div className="mb-6 transform -rotate-2 hover:rotate-2 transition-transform custom-cursor-pointer absolute lg:static -top-96 -right-5 lg:top-auto lg:right-auto">
+              <span className="inline-block bg-[#0d5f73] text-white px-6 py-2 rounded-full font-bold md:text-sm text-[8px] tracking-widest shadow-[4px_4px_0px_0px_rgba(219,161,53,1)] border-2 border-transparent hover:border-[#dba135] transition-all uppercase">
+               Warning: Causes Zoomies 🚀
+            </span>
+         </div>
            <h1 className="relative font-black brand-font text-[#0d5f73] tracking-tight z-20 text-left flex flex-col items-start leading-[0.85]">
               <span className="block text-[14vw] lg:text-[8rem] xl:text-[8rem] relative z-10 text-[#0d5f73]">
                 THE BEST PART? 
@@ -53,7 +52,7 @@ const Hero: React.FC = () => {
               From birthday barks to lazy-day tail wags, our treats make your pup drool, steal heart and disappear fast.
            </p>
 
-           <div className="mt-10 flex flex-col sm:flex-row gap-8 items-center w-full sm:w-auto">
+           <div className="my-6 flex flex-col sm:flex-row gap-8 items-center w-full sm:w-auto">
               <button className="relative group">
                  <div className="absolute inset-0 bg-[#0d5f73] rounded-2xl transform translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
                  <div className="relative bg-[#eb2f5f] text-white px-8 py-4 rounded-2xl font-black text-lg border-2 border-[#0d5f73] flex items-center gap-3 transform group-hover:-translate-y-1 transition-transform">
